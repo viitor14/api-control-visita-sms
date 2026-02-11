@@ -16,7 +16,7 @@ import setor from './routes/setorRoutes';
 import visitante from './routes/visitanteRoutes';
 import visita from './routes/visitaRoutes';
 
-const whiteList = ['http://localhost:5173', 'http://192.168.60.181:5173'];
+const whiteList = ['http://localhost:5173', 'http://192.168.60.181:5173', 'http://10.200.33.28'];
 
 const corsOptions = {
   origin(origin, callback) {
@@ -35,7 +35,7 @@ class App {
     this.server = http.createServer(this.app);
     this.io = new Server(this.server, {
       cors: {
-        origin: 'http://192.168.60.181:5173', // Em produção, troque '*' pela URL do seu front (http://localhost:3000)
+        origin: 'http://10.200.33.28', // Em produção, troque '*' pela URL do seu front (http://localhost:3000)
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
       },
     });
