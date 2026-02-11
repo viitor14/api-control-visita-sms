@@ -6,7 +6,7 @@ module.exports = {
       'users',
       [
         {
-          name: 'Administrador',
+          nome: 'Administrador',
           email: 'admin@email.com',
           password_hash: await bcrypt.hash('admin123', 8), // Criptografa a senha
           cargo: 'MASTER',
